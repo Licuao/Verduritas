@@ -33,7 +33,7 @@ public class ListaVerdurasActivity extends AppCompatActivity {
         TextView texto = findViewById(R.id.textView);
         //pintar el texto en el textView;
 
-        texto.setText("El"+ verdura+"podra cosecharse en"+fecha);
+        texto.setText("El"+verdura+"podra cosecharse en"+fecha);
 
     }
 }
