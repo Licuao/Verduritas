@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         //rescatar los elemento de la vista
 
         EditText fecha = findViewById(R.id.editTextDate);
-        Spinner especie = findViewById(R.id.spinner);
+        Spinner verdura = findViewById(R.id.spinner);
         Button guardar = findViewById(R.id.button);
 
         //agregar listener al boton(funcionalidad al boton)
@@ -38,14 +38,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 //rescatar los valores del formulario
                 String fechaStr = fecha.getText().toString();
+                String verduraStr = verdura.getSelectedItem().toString();
                 //empaquetarlos para la siguiente vista
-                Intent siguientePagina = new Intent(Main);
+                Intent siguientePagina = new Intent(MainActivity.this, ListaVerdurasActivity.class);
+                siguientePagina.putExtra("fecha",fechaStr);
+                siguientePagina.putExtra("verdura",verduraStr);
                 //ir a la siguiente vista
+                startActivity(siguientePagina);
             }
-        })
-
-            //rescatar los valores del formulario
-            //empaquetarlos para la siguiente vista
-            //ir a la siguiente vista
+        });
     }
 }

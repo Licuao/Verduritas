@@ -1,6 +1,8 @@
 package cl.inacap.verduritas;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +22,18 @@ public class ListaVerdurasActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        //rescatar datos de la pagina anterior
+        Intent contexto = getIntent();
+
+        String fecha = contexto.getStringExtra("fecha");
+        String verdura = contexto.getStringExtra("verdura");
+        //pintar datos pagina anterior
+
+            //rescatar textView
+        TextView texto = findViewById(R.id.textView);
+        //pintar el texto en el textView;
+
+        texto.setText("El"+ verdura+"podra cosecharse en"+fecha);
+
     }
 }
