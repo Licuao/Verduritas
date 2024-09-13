@@ -1,21 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:padding="16dp">
 
     <!-- Spinner para seleccionar el tipo de cultivo -->
     <Spinner
         android:id="@+id/spinnerCultivo"
+        style="@style/Widget.AppCompat.Spinner.DropDown.ActionBar"
         android:layout_width="374dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:minHeight="48dp"
         android:gravity="center"
-        android:prompt="@string/select_cultivo" />
+        android:minHeight="48dp"
+        android:prompt="@string/select_cultivo"
+        android:spinnerMode="dialog" />
 
     <!-- DatePicker para seleccionar la fecha de cultivo -->
 
@@ -23,26 +25,34 @@
 
     <DatePicker
         android:id="@+id/datePickerCultivo"
+        style="@android:style/Widget.DatePicker"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_margin="10dp"
+        android:layout_marginBottom="12dp"
         android:gravity="center" />
+
+    <!-- Botón para ir a la pantalla de lista de cultivos -->
 
     <Button
         android:id="@+id/btnRegistrar"
         android:layout_width="366dp"
         android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@drawable/btn_color"
         android:gravity="center"
         android:text="Registrar Cultivo"
+        android:textColor="@color/white"
         tools:ignore="HardcodedText" />
-
-    <!-- Botón para ir a la pantalla de lista de cultivos -->
 
     <Button
         android:id="@+id/btnVerCultivos"
         android:layout_width="366dp"
         android:layout_height="wrap_content"
+        android:background="@drawable/btn_color"
+        android:layout_margin="10dp"
         android:gravity="center"
         android:text="Ver Cultivos"
+        android:textColor="@color/white"
         tools:ignore="HardcodedText" />
 </LinearLayout>
