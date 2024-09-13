@@ -1,37 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp">
 
-    <LinearLayout
-        android:layout_width="413dp"
-        android:layout_height="648dp"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="-3dp"
-        tools:layout_editor_absoluteY="82dp">
+    <!-- Spinner para seleccionar el tipo de cultivo -->
+    <Spinner
+        android:id="@+id/spinnerCultivo"
+        android:layout_width="374dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:minHeight="48dp"
+        android:gravity="center"
+        android:prompt="@string/select_cultivo" />
 
-        <EditText
-            android:id="@+id/editTextDate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="date" />
+    <!-- DatePicker para seleccionar la fecha de cultivo -->
 
-        <Spinner
-            android:id="@+id/spinner"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:entries="@array/verduras"
-            />
+    <!-- Botón para registrar el cultivo -->
 
-        <Button
-            android:id="@+id/button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Guardar" />
-    </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <DatePicker
+        android:id="@+id/datePickerCultivo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:gravity="center" />
+
+    <Button
+        android:id="@+id/btnRegistrar"
+        android:layout_width="366dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Registrar Cultivo"
+        tools:ignore="HardcodedText" />
+
+    <!-- Botón para ir a la pantalla de lista de cultivos -->
+
+    <Button
+        android:id="@+id/btnVerCultivos"
+        android:layout_width="366dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Ver Cultivos"
+        tools:ignore="HardcodedText" />
+</LinearLayout>

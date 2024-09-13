@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Verduritas"
         tools:targetApi="31">
         <activity
+            android:name=".ListaCultivosActivity"
+            android:exported="false" />
+        <activity
             android:name=".ListaVerdurasActivity"
             android:exported="false" />
         <activity
