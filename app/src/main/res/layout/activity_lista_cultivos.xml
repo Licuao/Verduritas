@@ -4,8 +4,6 @@
     android:layout_height="match_parent">
 
     <!-- Aquí se mostrará la lista de cultivos -->
-
-    <!-- Botón para regresar a la pantalla principal -->
     <ListView
         android:id="@+id/listViewCultivos"
         android:layout_width="match_parent"

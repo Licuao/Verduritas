@@ -21,8 +21,6 @@
 
     <!-- DatePicker para seleccionar la fecha de cultivo -->
 
-    <!-- Botón para registrar el cultivo -->
-
     <DatePicker
         android:id="@+id/datePickerCultivo"
         style="@android:style/Widget.DatePicker"
